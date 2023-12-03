@@ -1,0 +1,120 @@
+/* Add/replace the following styles in your index.css file */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height of the viewport */
+  max-width: 1280px; /* Maximum width */
+  margin: 0 auto; /* Center the content */
+  background-color: #f0f0f0; /* Custom background color */
+  overflow: hidden; /* Hide overflow */
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 10px 0;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  width: 100%;
+}
+
+.tag-description-area,
+.quiz-area {
+  flex: 1;
+  border: 2px solid #ccc; /* Visible border */
+  padding: 20px; /* Space between border and content */
+  box-sizing: border-box; /* Include padding in width calculation */
+  overflow: hidden; /* Hide overflow */
+  flex-direction: column;
+  display: flex;
+}
+
+.tag-description {
+  white-space: normal; /* Allow text to wrap */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: clip; /* Clip overflow text */
+}
+
+.tag-description a {
+  display: block;
+  overflow: hidden;
+  white-space: pre-wrap;
+}
+
+.randomize-button {
+  position: relative;
+  align-self: flex-end;
+  margin-bottom: 30px;
+  padding: 10px;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.randomize-button:active {
+  box-shadow: none; /* Remove box shadow when pressed */
+}
+
+.selector {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  font-family: 'monospace'; /* Monospace font for the selector */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow */
+}
+
+.quiz-area .selector:hover {
+  border: 1px solid #3498db; /* Change the color as needed */
+  cursor: pointer; /* Change cursor style on hover */
+}
+
+.input-group {
+  margin-top: 10px;
+}
+
+input {
+  padding: 8px;
+  border: 2px solid #3498db; /* Custom border color */
+  border-radius: 8px; /* Rounded border */
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.label {
+  margin-bottom: 15px;
+}
+
+/* Responsive layout for screens at least 600px wide */
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .tag-description-area,
+  .quiz-area {
+    flex: 3;
+  }
+
+}
+
+/* Responsive layout for screens smaller than 600px wide */
+@media (max-width: 600px) {
+  .tag-description-area,
+  .quiz-area {
+    order: 1;
+  }
+}
